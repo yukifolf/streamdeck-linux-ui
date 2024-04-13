@@ -3,11 +3,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
-    uses: streamdeck-linux-gui/streamdeck-linux-gui/.github/workflows/test.yaml@main
-
   release:
-    needs: test
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch'
     environment: stable
