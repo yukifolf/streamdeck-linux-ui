@@ -79,7 +79,6 @@ class DisplayGrid:
             self.initialize_page(page)
         # The sync event allows a caller to wait until all the buttons have been processed
 
-
     def initialize_page(self, page: int):
         self.pages[page] = {}
         for button in range(self.streamdeck.key_count()):
